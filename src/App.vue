@@ -1,18 +1,14 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
   <div id="app">
     <header>
-      <img alt="Wasted logo" class="logo" src="@/assets/LOGOOO copy.png" width="125" height="125" />
-
+      <img alt="Wasted logo" class="logo" src="@/assets/LOGOOO copy.png" width="100" height="100" />
       <div class="wrapper">
-        <HelloWorld msg="Wasted" />
-        <!-- <img alt="Recycling photo" class="recycling" src="@/assets/recycling.png" width="300" height="300" /> -->
+        <!-- <HelloWorld msg="Wasted" /> -->
         <nav>
-          <!-- <button to="/">Login</button>
-          <button to="/about">Register</button> -->
         </nav>
       </div>
     </header>
