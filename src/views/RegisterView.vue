@@ -1,21 +1,86 @@
 <template>
   <div class="register">
     <h1>Sign up</h1>
-    <input type="text" placeholder="Email"><br>
-    <input type="password" placeholder="Password"><br>
-    <button>Sign up!</button>
+    <input type="text" v-model="email" placeholder="Email"><br>
+    <input type="password" v-model="password" placeholder="Password"><br>
+    <p> Email is: {{ email }}</p>
+    <p> Password is: {{ password }}</p>
+    <button @click="register">Sign up!</button>
     <span> Go back to <router-link to="/login">login.</router-link></span>
   </div>
 </template>
 
 <script>
 
+// import firebase from 'firebase/compat/app';
+// import 'firebase/compat/auth';
+// import 'firebase/compat/firestore';
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
 export default{
 name: 'register',
 data() {
-return{}
+return {
+    email:"",
+    password:"",
+    }
 },
-methods: {}
+methods: {
+register(){
+
+const auth = getAuth();
+createUserWithEmailAndPassword(auth, this.email, this.password)
+  .then((userCredential) => {
+    // console.log("Dzialam")
+    // const user = userCredential.user;
+    console.log('Successfully registered:', userCredential.user);
+  })
+      .catch((error) => {
+        // Error occurred during registration
+        this.error = error.message;
+        console.error('Registration error:', error);
+  });
+
+
+
+
+
+
+
+
+// const auth = getAuth();
+//       createUserWithEmailAndPassword(auth, this.email, this.password)
+  
+        
+// // firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
+// .then(function(user) {
+//   console.log("Success: ", user);
+// })
+// .catch(function(error) {
+//   console.error("Error: ", error);
+// });
+    // firebase.auth().createUserWithEmailAndPassword(this.email,this.password)
+//     .then(function (user) {
+//     console.log("Dzialam")
+//     },
+//     function(err) {
+//     alert("ops, " + err.message)
+//    }
+//  );
+         // Call Firebase auth to create user with email and password
+      // createUserWithEmailAndPassword(auth, this.email, this.password)
+      // .then((userCredential) => {
+      //   // User successfully registered
+      //   console.log('Successfully registered:', userCredential.user);
+      // })
+      // .catch((error) => {
+      //   // Error occurred during registration
+      //   this.error = error.message;
+      //   console.error('Registration error:', error);  
+      //    });
+
+      }
+    }
 }
 </script>
 
