@@ -29,7 +29,7 @@ signInWithEmailAndPassword(auth, this.email, this.password)
     // Signed in 
     const user = userCredential.user;
      console.log('Successfully logged in:', userCredential.user);
-    //  this.$router.replace('landingpage')
+     this.$router.replace('landingpage')
   })
   .catch((error) => {
         // Error occurred during registration
