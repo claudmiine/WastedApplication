@@ -12,9 +12,6 @@
 
 <script>
 
-// import firebase from 'firebase/compat/app';
-// import 'firebase/compat/auth';
-// import 'firebase/compat/firestore';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 export default{
@@ -40,44 +37,6 @@ createUserWithEmailAndPassword(auth, this.email, this.password)
         this.error = error.message;
         console.error('Registration error:', error);
   });
-
-
-
-
-
-
-
-
-// const auth = getAuth();
-//       createUserWithEmailAndPassword(auth, this.email, this.password)
-  
-        
-// // firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
-// .then(function(user) {
-//   console.log("Success: ", user);
-// })
-// .catch(function(error) {
-//   console.error("Error: ", error);
-// });
-    // firebase.auth().createUserWithEmailAndPassword(this.email,this.password)
-//     .then(function (user) {
-//     console.log("Dzialam")
-//     },
-//     function(err) {
-//     alert("ops, " + err.message)
-//    }
-//  );
-         // Call Firebase auth to create user with email and password
-      // createUserWithEmailAndPassword(auth, this.email, this.password)
-      // .then((userCredential) => {
-      //   // User successfully registered
-      //   console.log('Successfully registered:', userCredential.user);
-      // })
-      // .catch((error) => {
-      //   // Error occurred during registration
-      //   this.error = error.message;
-      //   console.error('Registration error:', error);  
-      //    });
 
       }
     }
