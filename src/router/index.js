@@ -36,15 +36,15 @@ const router = new VueRouter({
     {
       path: '/landingpage',
       name: 'landingpage',
-
+        meta: {
+      requiresAuth: true
+      },
       component: () => import('../views/LandingPageView.vue')
     },
     {
       path: '/register',
       name: 'register',
-      meta: {
-      requiresAuth: true
-      },
+
       component: () => import('../views/RegisterView.vue')
       
     },

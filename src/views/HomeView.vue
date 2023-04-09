@@ -28,11 +28,5 @@
 
 <script>
 // import HelloWorld from '@/components/HelloWorld.vue'
-import ContentBlock from "@/components/ContentBlock.vue";
 
-export default {
-  components: {
-    ContentBlock
-  }
-};
 </script>
