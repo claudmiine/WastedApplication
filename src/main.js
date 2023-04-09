@@ -25,7 +25,7 @@ const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
   if (user) {
     console.log(user)
-    router.push({ path: 'landingpage' })
+    // router.push({ path: 'landingpage' })
     // User is signed in, see docs for a list of available properties
     // https://firebase.google.com/docs/reference/js/firebase.User
    

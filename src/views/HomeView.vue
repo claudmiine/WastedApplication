@@ -1,15 +1,15 @@
 <template>
   <main>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+    <!-- <h1 class="green">{{ msg }}</h1> -->
     
     <h3 class="joinus"> Join us and let’s change the world together!</h3>
       <h3>Wasted helps you to make your waste management easier.</h3>
     <img alt="Recycling photo" class="recycling" src="@/assets/recycling.png" width="300" height="300" />
     
     
-          <button to="/">Login</button>
-          <button to="/about">Register</button>
+          <button><router-link to="/login">Login</router-link></button>
+           <button><router-link to="/register">Register</router-link></button>
 
       <h3 class="joinus"> Personal experience</h3>
       <p>Create personalised calendar for your collection day and more!</p>
