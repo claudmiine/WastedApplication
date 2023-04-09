@@ -34,7 +34,7 @@ signInWithEmailAndPassword(auth, this.email, this.password)
   .catch((error) => {
         // Error occurred during registration
         this.error = error.message;
-        console.error('Registration error:', error);
+        console.error('Login error:', error);
   });
     }
 }

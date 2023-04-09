@@ -30,7 +30,7 @@ createUserWithEmailAndPassword(auth, this.email, this.password)
   .then((userCredential) => {
     // console.log("Dzialam")
     // const user = userCredential.user;
-    console.log('Successfully registered:', userCredential.user);
+    console.log('Successfully registered!!!!!!!!!!!!:', userCredential.user);
   })
       .catch((error) => {
         // Error occurred during registration
